@@ -7,16 +7,13 @@ func GetStringDistance(str1, str2 string) int {
 	min := str1Len
 	max := str2Len
 	target := str1
-	compareStr := str2
 	if str2Len < str1Len {
 		min = str2Len
 		max = str1Len
 		target = str2
-		compareStr = str1
 	}
-
 	for idx := range target {
-		if target[idx] != compareStr[idx] {
+		if str1[idx] != str2[idx] {
 			diff++
 		}
 	}
